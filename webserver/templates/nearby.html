@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Activity</title>
+    <script type="text/javascript" src="{{ url_for('static', filename='jquery-3.1.1.min.js') }}"></script>
+  <link href="{{ url_for('static', filename='bootstrap.css') }}" rel="stylesheet" type="text/css"/>
+<style>
+    #act{
+        max-width: 500px;
+        padding: 15px;
+        margin: 0 auto;
+    }
+</style>
+</head>
+<body>
+<div id="act">
+
+  <!-- Table -->
+     <h1>Food</h1>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+
+        <th>fname</th>
+        <th>faddress</th>
+        <th>price_level</th>
+        <th>type</th>
+        <th>distance</th>
+        <th>open_time</th>
+
+    </tr>
+    </thead>
+
+    {% for n in foods %}
+       <tr>
+          {% for nn in n %}
+            <td>{{nn}}</td>
+         {% endfor %}
+
+             </tr>
+    {% endfor %}
+
+  </table>
+    <h1>Transportation</h1>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+
+        <th>Tname</th>
+        <th>Taddress</th>
+
+
+        <th>Distance</th>
+
+
+    </tr>
+    </thead>
+
+    {% for n in trans %}
+       <tr>
+          {% for nn in n %}
+            <td>{{nn}}</td>
+         {% endfor %}
+
+             </tr>
+    {% endfor %}
+
+  </table>
+
+
+
+</div>
+</div>
+</body>
+</html>

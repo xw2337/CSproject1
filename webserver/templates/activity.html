@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Activity</title>
+    <script type="text/javascript" src="{{ url_for('static', filename='jquery-3.1.1.min.js') }}"></script>
+  <link href="{{ url_for('static', filename='bootstrap.css') }}" rel="stylesheet" type="text/css"/>
+<style>
+    #act{
+        max-width: 500px;
+        padding: 15px;
+        margin: 0 auto;
+    }
+</style>
+</head>
+<body>
+<div id="act">
+    <form action="/refer">
+  <input type="text" id="search" style="width:300px;" name ="hobby" placeholder="Date or Type" required autofocus>
+    <button class="btn btn-default" type="submit">Search</button>
+        </form>
+  <!-- Table -->
+  <table class="table table-striped">
+    <thead>
+    <tr>
+        <th>name</th>
+        <th>location</th>
+        <th>time</th>
+        <th>contact</th>
+        <th>type</th>
+        <th>ticket_price</th>
+        <th>operations</th>
+    </tr>
+    </thead>
+
+    {% for n in data %}
+       <tr>
+          {% for nn in n %}
+            <td>{{nn}}</td>
+         {% endfor %}
+           <td><a href="/nearby">nearby</a></td>
+             </tr>
+    {% endfor %}
+
+  </table>
+    <a href="add">Add an activity</a>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<html>
+<head>
+  <script type="text/javascript" src="{{ url_for('static', filename='jquery-3.1.1.min.js') }}"></script>
+  <link href="{{ url_for('static', filename='bootstrap.css') }}" rel="stylesheet" type="text/css"/>
+</head>
+<style>
+  body {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #eee;
+}
+
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 10px;
+}
+.form-signin .checkbox {
+  font-weight: normal;
+}
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+</style>
+
+<body>
+<div class="container">
+
+      <form class="form-signin" action="/addAct" method="post">
+        <a href="/">To Sign In Page</a>
+        <h2 class="form-signin-heading">Add an Activity</h2>
+        <label for="name" class="sr-only">name</label>
+        <input type="text" id="name" class="form-control" name ="name" placeholder="name" required autofocus>
+        <br>
+        <label for="location" class="sr-only">location</label>
+        <input type="text" id="location" class="form-control" name ="location" placeholder="location" required autofocus>
+        <br>
+        <label for="time" class="sr-only">time</label>
+        <input type="text" id="time" class="form-control" name ="time" placeholder="time" required autofocus>
+        <br>
+        <label for="contact" class="sr-only">contact</label>
+        <input type="text" id="contact" class="form-control" name ="contact" placeholder="contact" required autofocus>
+        <br>
+        <label for="type" class="sr-only">type</label>
+        <input type="text" id="type" class="form-control" name ="type" placeholder="type" required autofocus>
+        <br>
+        <label for="ticket_price" class="sr-only">ticket_price</label>
+        <input type="text" id="ticket_price" class="form-control" name ="ticket_price" placeholder="ticket_price" required autofocus>
+        <br>
+
+
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Add</button>
+      </form>
+
+    </div>
+
+
+
+</body>
+
+
+</html>
